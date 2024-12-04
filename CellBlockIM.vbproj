@@ -1,0 +1,1007 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15BB97E2-0AF7-41BA-93D7-84565FC7754B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CellBlockIM.My.MyApplication</StartupObject>
+    <RootNamespace>CellBlockIM</RootNamespace>
+    <AssemblyName>CellBlockIM</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CellBlockIM.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CellBlockIM.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.3.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.3.8\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=9.1.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.9.1.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="ZstdSharp, Version=0.8.0.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>packages\ZstdSharp.Port.0.8.0\lib\net462\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminDashboard\DashboadAdmin\AdminMainDashboard.Designer.vb">
+      <DependentUpon>AdminMainDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\AdminMainDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Admin Client\AdminClientHome.Designer.vb">
+      <DependentUpon>AdminClientHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Admin Client\AdminClientHome.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Admin Client\AdminConcernControl.Designer.vb">
+      <DependentUpon>AdminConcernControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Admin Client\AdminConcernControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Admin Client\AdminContactControl.Designer.vb">
+      <DependentUpon>AdminContactControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Admin Client\AdminContactControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Admin Client\AdminContactReply.Designer.vb">
+      <DependentUpon>AdminContactReply.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Admin Client\AdminContactReply.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Admin Client\AdminVisitorApprove.Designer.vb">
+      <DependentUpon>AdminVisitorApprove.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Admin Client\AdminVisitorApprove.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Admin Client\AdminVisitorControl.Designer.vb">
+      <DependentUpon>AdminVisitorControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Admin Client\AdminVisitorControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Admin Client\AdminVisitorStatus.Designer.vb">
+      <DependentUpon>AdminVisitorStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Admin Client\AdminVisitorStatus.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Me\AdminChangePassword.Designer.vb">
+      <DependentUpon>AdminChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Me\AdminChangePassword.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Me\AdminControl.Designer.vb">
+      <DependentUpon>AdminControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Me\AdminControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Me\AdminUpdateInfo.Designer.vb">
+      <DependentUpon>AdminUpdateInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Me\AdminUpdateInfo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\Settings\AdminSettingsControl.Designer.vb">
+      <DependentUpon>AdminSettingsControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\DashboadAdmin\Settings\AdminSettingsControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\LoginAdmin.Designer.vb">
+      <DependentUpon>LoginAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\LoginAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\LogoutAdmin.Designer.vb">
+      <DependentUpon>LogoutAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\LogoutAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CaseData.vb" />
+    <Compile Include="CrimeData.vb" />
+    <Compile Include="Dashboard\Add\AddEditDeleteControl.Designer.vb">
+      <DependentUpon>AddEditDeleteControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Add\AddEditDeleteControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Add\AddEntityControl.Designer.vb">
+      <DependentUpon>AddEntityControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Add\AddEntityControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Add\AddStaff\AddStaffControl.Designer.vb">
+      <DependentUpon>AddStaffControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Add\AddStaff\AddStaffControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Add\AddStaff\AddStaffHomeControl.Designer.vb">
+      <DependentUpon>AddStaffHomeControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Add\AddStaff\AddStaffHomeControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Add\AddStaff\DeleteStaffControl.Designer.vb">
+      <DependentUpon>DeleteStaffControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Add\AddStaff\DeleteStaffControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Add\AddStaff\EditStaffControl.Designer.vb">
+      <DependentUpon>EditStaffControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Add\AddStaff\EditStaffControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Add\AddArrestingOfficerControl.Designer.vb">
+      <DependentUpon>AddArrestingOfficerControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Add\AddArrestingOfficerControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Add\AddCriminalCaseControl.Designer.vb">
+      <DependentUpon>AddCriminalCaseControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Add\AddCriminalCaseControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Add\AddInmateControl.Designer.vb">
+      <DependentUpon>AddInmateControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Add\AddInmateControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Add\AddMedicalinfoControl.Designer.vb">
+      <DependentUpon>AddMedicalinfoControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Add\AddMedicalinfoControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Add\AddMultipleOffenseControl.Designer.vb">
+      <DependentUpon>AddMultipleOffenseControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Add\AddMultipleOffenseControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Add\CameraCaptureForm.Designer.vb">
+      <DependentUpon>CameraCaptureForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Add\CameraCaptureForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\InmateHomeControl.Designer.vb">
+      <DependentUpon>InmateHomeControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\InmateHomeControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Remove\ReleaseInmateControl.Designer.vb">
+      <DependentUpon>ReleaseInmateControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Remove\ReleaseInmateControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Remove\RemoveHomeControl.Designer.vb">
+      <DependentUpon>RemoveHomeControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Remove\RemoveHomeControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Remove\RemoveOptionControl.Designer.vb">
+      <DependentUpon>RemoveOptionControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Remove\RemoveOptionControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Update\AddOffenseForm.Designer.vb">
+      <DependentUpon>AddOffenseForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Update\AddOffenseForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Update\UpdateCriminalCaseControl.Designer.vb">
+      <DependentUpon>UpdateCriminalCaseControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Update\UpdateCriminalCaseControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Update\UpdateHomeControl.Designer.vb">
+      <DependentUpon>UpdateHomeControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Update\UpdateHomeControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Update\UpdateInmateControl.Designer.vb">
+      <DependentUpon>UpdateInmateControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Update\UpdateInmateControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Update\UpdateMedicalinfoControl.Designer.vb">
+      <DependentUpon>UpdateMedicalinfoControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\Update\UpdateMedicalinfoControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\view\ViewCaseController.Designer.vb">
+      <DependentUpon>ViewCaseController.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\view\ViewCaseController.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\view\ViewMedicalInfo.Designer.vb">
+      <DependentUpon>ViewMedicalInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\view\ViewMedicalInfo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\view\ViewPDLControl.Designer.vb">
+      <DependentUpon>ViewPDLControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Inmate\view\ViewPDLControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\LogInSuperAdmin.Designer.vb">
+      <DependentUpon>LogInSuperAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\LogInSuperAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Logout.Designer.vb">
+      <DependentUpon>Logout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Logout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\MainDashboard.Designer.vb">
+      <DependentUpon>MainDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\MainDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\MainDashboardControl.Designer.vb">
+      <DependentUpon>MainDashboardControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\MainDashboardControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Admin\AdminHomeControl.Designer.vb">
+      <DependentUpon>AdminHomeControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Admin\AdminHomeControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Admin\ManageAdminControl.Designer.vb">
+      <DependentUpon>ManageAdminControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Admin\ManageAdminControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Admin\ManageAdminInfoControl.Designer.vb">
+      <DependentUpon>ManageAdminInfoControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Admin\ManageAdminInfoControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Client\ClientHomeControl.Designer.vb">
+      <DependentUpon>ClientHomeControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Client\ClientHomeControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Client\ConcernsControl.Designer.vb">
+      <DependentUpon>ConcernsControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Client\ConcernsControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Client\ContactedControl.Designer.vb">
+      <DependentUpon>ContactedControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Client\ContactedControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Client\ContactReply.Designer.vb">
+      <DependentUpon>ContactReply.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Client\ContactReply.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Client\VisitorApproveControl.Designer.vb">
+      <DependentUpon>VisitorApproveControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Client\VisitorApproveControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Client\VisitorControl.Designer.vb">
+      <DependentUpon>VisitorControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Client\VisitorControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Client\VisitorStatus.Designer.vb">
+      <DependentUpon>VisitorStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Client\VisitorStatus.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\ManageHomeControl.Designer.vb">
+      <DependentUpon>ManageHomeControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\ManageHomeControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Super\ChangePasswordControl.Designer.vb">
+      <DependentUpon>ChangePasswordControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Super\ChangePasswordControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Super\SuperAdminControl.Designer.vb">
+      <DependentUpon>SuperAdminControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Super\SuperAdminControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Super\UpdateInfoControl.Designer.vb">
+      <DependentUpon>UpdateInfoControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Manage Access\Super\UpdateInfoControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Report\ReportHomeControl.Designer.vb">
+      <DependentUpon>ReportHomeControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Report\ReportHomeControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Settings\SettingsControl.Designer.vb">
+      <DependentUpon>SettingsControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Settings\SettingsControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmergencyContactData.vb" />
+    <Compile Include="FamilyData.vb" />
+    <Compile Include="HomePage\About\AboutHistoryControl.Designer.vb">
+      <DependentUpon>AboutHistoryControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\About\AboutHistoryControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePage\About\AboutHomeControl.Designer.vb">
+      <DependentUpon>AboutHomeControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\About\AboutHomeControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePage\Announcements.Designer.vb">
+      <DependentUpon>Announcements.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\Announcements.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePage\Contact\ContactPageControl.Designer.vb">
+      <DependentUpon>ContactPageControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\Contact\ContactPageControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePage\CreateAccount\AccountHomeControl.Designer.vb">
+      <DependentUpon>AccountHomeControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\CreateAccount\AccountHomeControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePage\CreateAccount\CreateAccountControl.Designer.vb">
+      <DependentUpon>CreateAccountControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\CreateAccount\CreateAccountControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePage\CreateAccount\CreateImageControl.Designer.vb">
+      <DependentUpon>CreateImageControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\CreateAccount\CreateImageControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePage\CreateAccount\CreatePasswordControl.Designer.vb">
+      <DependentUpon>CreatePasswordControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\CreateAccount\CreatePasswordControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePage\Home.Designer.vb">
+      <DependentUpon>Home.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\Home.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePage\HomeControl.Designer.vb">
+      <DependentUpon>HomeControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\HomeControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePage\InmateHomePage\InmateHomePage.Designer.vb">
+      <DependentUpon>InmateHomePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\InmateHomePage\InmateHomePage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePage\InmateHomePage\InmateReportControls.Designer.vb">
+      <DependentUpon>InmateReportControls.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\InmateHomePage\InmateReportControls.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePage\InmateHomePage\ReportConcernControl.Designer.vb">
+      <DependentUpon>ReportConcernControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\InmateHomePage\ReportConcernControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePage\InmateHomePage\VisitationControl.Designer.vb">
+      <DependentUpon>VisitationControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\InmateHomePage\VisitationControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePage\Map\MapPageControl.Designer.vb">
+      <DependentUpon>MapPageControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\Map\MapPageControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomePage\ReportsControl.Designer.vb">
+      <DependentUpon>ReportsControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage\ReportsControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MedicalData.vb" />
+    <Compile Include="modDB.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PDLData.vb" />
+    <Compile Include="UserData.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdminDashboard\DashboadAdmin\AdminMainDashboard.resx">
+      <DependentUpon>AdminMainDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Admin Client\AdminClientHome.resx">
+      <DependentUpon>AdminClientHome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Admin Client\AdminConcernControl.resx">
+      <DependentUpon>AdminConcernControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Admin Client\AdminContactControl.resx">
+      <DependentUpon>AdminContactControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Admin Client\AdminContactReply.resx">
+      <DependentUpon>AdminContactReply.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Admin Client\AdminVisitorApprove.resx">
+      <DependentUpon>AdminVisitorApprove.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Admin Client\AdminVisitorControl.resx">
+      <DependentUpon>AdminVisitorControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Admin Client\AdminVisitorStatus.resx">
+      <DependentUpon>AdminVisitorStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Me\AdminChangePassword.resx">
+      <DependentUpon>AdminChangePassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Me\AdminControl.resx">
+      <DependentUpon>AdminControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDashboard\DashboadAdmin\AdminManageInfo\Me\AdminUpdateInfo.resx">
+      <DependentUpon>AdminUpdateInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDashboard\DashboadAdmin\Settings\AdminSettingsControl.resx">
+      <DependentUpon>AdminSettingsControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDashboard\LoginAdmin.resx">
+      <DependentUpon>LoginAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminDashboard\LogoutAdmin.resx">
+      <DependentUpon>LogoutAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Add\AddEditDeleteControl.resx">
+      <DependentUpon>AddEditDeleteControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Add\AddEntityControl.resx">
+      <DependentUpon>AddEntityControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Add\AddStaff\AddStaffControl.resx">
+      <DependentUpon>AddStaffControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Add\AddStaff\AddStaffHomeControl.resx">
+      <DependentUpon>AddStaffHomeControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Add\AddStaff\DeleteStaffControl.resx">
+      <DependentUpon>DeleteStaffControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Add\AddStaff\EditStaffControl.resx">
+      <DependentUpon>EditStaffControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Inmate\Add\AddArrestingOfficerControl.resx">
+      <DependentUpon>AddArrestingOfficerControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Inmate\Add\AddCriminalCaseControl.resx">
+      <DependentUpon>AddCriminalCaseControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Inmate\Add\AddInmateControl.resx">
+      <DependentUpon>AddInmateControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Inmate\Add\AddMedicalinfoControl.resx">
+      <DependentUpon>AddMedicalinfoControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Inmate\Add\AddMultipleOffenseControl.resx">
+      <DependentUpon>AddMultipleOffenseControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Inmate\Add\CameraCaptureForm.resx">
+      <DependentUpon>CameraCaptureForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Inmate\InmateHomeControl.resx">
+      <DependentUpon>InmateHomeControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Inmate\Remove\ReleaseInmateControl.resx">
+      <DependentUpon>ReleaseInmateControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Inmate\Remove\RemoveHomeControl.resx">
+      <DependentUpon>RemoveHomeControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Inmate\Remove\RemoveOptionControl.resx">
+      <DependentUpon>RemoveOptionControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Inmate\Update\AddOffenseForm.resx">
+      <DependentUpon>AddOffenseForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Inmate\Update\UpdateCriminalCaseControl.resx">
+      <DependentUpon>UpdateCriminalCaseControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Inmate\Update\UpdateHomeControl.resx">
+      <DependentUpon>UpdateHomeControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Inmate\Update\UpdateInmateControl.resx">
+      <DependentUpon>UpdateInmateControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Inmate\Update\UpdateMedicalinfoControl.resx">
+      <DependentUpon>UpdateMedicalinfoControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Inmate\view\ViewCaseController.resx">
+      <DependentUpon>ViewCaseController.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Inmate\view\ViewMedicalInfo.resx">
+      <DependentUpon>ViewMedicalInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Inmate\view\ViewPDLControl.resx">
+      <DependentUpon>ViewPDLControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\LogInSuperAdmin.resx">
+      <DependentUpon>LogInSuperAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Logout.resx">
+      <DependentUpon>Logout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\MainDashboard.resx">
+      <DependentUpon>MainDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\MainDashboardControl.resx">
+      <DependentUpon>MainDashboardControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Manage Access\Admin\AdminHomeControl.resx">
+      <DependentUpon>AdminHomeControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Manage Access\Admin\ManageAdminControl.resx">
+      <DependentUpon>ManageAdminControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Manage Access\Admin\ManageAdminInfoControl.resx">
+      <DependentUpon>ManageAdminInfoControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Manage Access\Client\ClientHomeControl.resx">
+      <DependentUpon>ClientHomeControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Manage Access\Client\ConcernsControl.resx">
+      <DependentUpon>ConcernsControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Manage Access\Client\ContactedControl.resx">
+      <DependentUpon>ContactedControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Manage Access\Client\ContactReply.resx">
+      <DependentUpon>ContactReply.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Manage Access\Client\VisitorApproveControl.resx">
+      <DependentUpon>VisitorApproveControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Manage Access\Client\VisitorControl.resx">
+      <DependentUpon>VisitorControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Manage Access\Client\VisitorStatus.resx">
+      <DependentUpon>VisitorStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Manage Access\ManageHomeControl.resx">
+      <DependentUpon>ManageHomeControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Manage Access\Super\ChangePasswordControl.resx">
+      <DependentUpon>ChangePasswordControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Manage Access\Super\SuperAdminControl.resx">
+      <DependentUpon>SuperAdminControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Manage Access\Super\UpdateInfoControl.resx">
+      <DependentUpon>UpdateInfoControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Report\ReportHomeControl.resx">
+      <DependentUpon>ReportHomeControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Settings\SettingsControl.resx">
+      <DependentUpon>SettingsControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage\About\AboutHistoryControl.resx">
+      <DependentUpon>AboutHistoryControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage\About\AboutHomeControl.resx">
+      <DependentUpon>AboutHomeControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage\Announcements.resx">
+      <DependentUpon>Announcements.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage\Contact\ContactPageControl.resx">
+      <DependentUpon>ContactPageControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage\CreateAccount\AccountHomeControl.resx">
+      <DependentUpon>AccountHomeControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage\CreateAccount\CreateAccountControl.resx">
+      <DependentUpon>CreateAccountControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage\CreateAccount\CreateImageControl.resx">
+      <DependentUpon>CreateImageControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage\CreateAccount\CreatePasswordControl.resx">
+      <DependentUpon>CreatePasswordControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage\Home.resx">
+      <DependentUpon>Home.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage\HomeControl.resx">
+      <DependentUpon>HomeControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage\InmateHomePage\InmateHomePage.resx">
+      <DependentUpon>InmateHomePage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage\InmateHomePage\InmateReportControls.resx">
+      <DependentUpon>InmateReportControls.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage\InmateHomePage\ReportConcernControl.resx">
+      <DependentUpon>ReportConcernControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage\InmateHomePage\VisitationControl.resx">
+      <DependentUpon>VisitationControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage\Map\MapPageControl.resx">
+      <DependentUpon>MapPageControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage\ReportsControl.resx">
+      <DependentUpon>ReportsControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\cellblock-central %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grid %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inmate %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inmate %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin-with-cogwheels %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manual.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled Project.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled design %282%29 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FrontView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf-file %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled design %284%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BBRB-Cebu1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\243322008_190892826490082_368692.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telephone %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house-visiting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\issue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled design %281%29 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin-with-cogwheels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Super.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SuperAd.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

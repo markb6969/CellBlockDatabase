@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CellBlockIM", "CellBlockIM.vbproj", "{15BB97E2-0AF7-41BA-93D7-84565FC7754B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EF0762F7-2BBA-4025-B7A5-9B9434D4BD4C}"
+	ProjectSection(SolutionItems) = preProject
+		PDLData.vb = PDLData.vb
+		UserData.vb = UserData.vb
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15BB97E2-0AF7-41BA-93D7-84565FC7754B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15BB97E2-0AF7-41BA-93D7-84565FC7754B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15BB97E2-0AF7-41BA-93D7-84565FC7754B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15BB97E2-0AF7-41BA-93D7-84565FC7754B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D8F11E5-12A7-4A4A-9BA8-7A9E8DF4B29D}
+	EndGlobalSection
+EndGlobal
