@@ -28,13 +28,13 @@ Partial Class AddStaffHomeControl
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.AddEditDeleteControl1 = New CellBlockIM.AddEditDeleteControl()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.dgvStaffInfo = New System.Windows.Forms.DataGridView()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.AddEditDeleteControl1 = New CellBlockIM.AddEditDeleteControl()
         Me.FlowLayoutPanel2.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -58,7 +58,7 @@ Partial Class AddStaffHomeControl
         '
         Me.btnAddCellblock.FlatAppearance.BorderSize = 0
         Me.btnAddCellblock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddCellblock.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddCellblock.Font = New System.Drawing.Font("Poppins SemiBold", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddCellblock.Location = New System.Drawing.Point(3, 3)
         Me.btnAddCellblock.Name = "btnAddCellblock"
         Me.btnAddCellblock.Size = New System.Drawing.Size(296, 77)
@@ -70,7 +70,7 @@ Partial Class AddStaffHomeControl
         '
         Me.btnAddStaff.FlatAppearance.BorderSize = 0
         Me.btnAddStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddStaff.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddStaff.Font = New System.Drawing.Font("Poppins SemiBold", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddStaff.ForeColor = System.Drawing.Color.Teal
         Me.btnAddStaff.Location = New System.Drawing.Point(305, 3)
         Me.btnAddStaff.Name = "btnAddStaff"
@@ -124,15 +124,6 @@ Partial Class AddStaffHomeControl
         Me.Panel1.Size = New System.Drawing.Size(424, 387)
         Me.Panel1.TabIndex = 0
         '
-        'AddEditDeleteControl1
-        '
-        Me.AddEditDeleteControl1.BackColor = System.Drawing.Color.White
-        Me.AddEditDeleteControl1.Location = New System.Drawing.Point(3, 145)
-        Me.AddEditDeleteControl1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.AddEditDeleteControl1.Name = "AddEditDeleteControl1"
-        Me.AddEditDeleteControl1.Size = New System.Drawing.Size(298, 229)
-        Me.AddEditDeleteControl1.TabIndex = 24
-        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer))
@@ -156,10 +147,10 @@ Partial Class AddStaffHomeControl
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Poppins SemiBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(28, 35)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(120, 25)
+        Me.Label2.Size = New System.Drawing.Size(123, 37)
         Me.Label2.TabIndex = 20
         Me.Label2.Text = "Staff Type"
         '
@@ -191,12 +182,21 @@ Partial Class AddStaffHomeControl
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Poppins SemiBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(23, 35)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(185, 25)
+        Me.Label3.Size = New System.Drawing.Size(196, 37)
         Me.Label3.TabIndex = 20
         Me.Label3.Text = "Staff Information"
+        '
+        'AddEditDeleteControl1
+        '
+        Me.AddEditDeleteControl1.BackColor = System.Drawing.Color.White
+        Me.AddEditDeleteControl1.Location = New System.Drawing.Point(3, 145)
+        Me.AddEditDeleteControl1.Margin = New System.Windows.Forms.Padding(4)
+        Me.AddEditDeleteControl1.Name = "AddEditDeleteControl1"
+        Me.AddEditDeleteControl1.Size = New System.Drawing.Size(298, 229)
+        Me.AddEditDeleteControl1.TabIndex = 24
         '
         'AddStaffHomeControl
         '
