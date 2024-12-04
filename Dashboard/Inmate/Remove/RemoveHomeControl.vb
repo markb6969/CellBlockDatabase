@@ -103,6 +103,13 @@ Public Class RemoveHomeControl
         If mainForm IsNot Nothing Then
             mainForm.SwitchToRemoveOptionControl()
         End If
+
+
+        ' Proceed to switch to the next control if the check passes
+        Dim adminDashboard As AdminMainDashboard = TryCast(Me.ParentForm, AdminMainDashboard)
+        If adminDashboard IsNot Nothing Then
+            adminDashboard.SwitchToRemoveOptionControl()
+        End If
     End Sub
 
 

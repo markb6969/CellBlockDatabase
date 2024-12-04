@@ -368,6 +368,28 @@ Module modDB
         Return dt
     End Function
 
+
+
+    Public Function GetPDLCount() As Integer
+        Dim count As Integer = 0
+        Try
+            openConn(db_name)
+            cmd.Connection = conn
+            cmd.CommandText = "SELECT COUNT(*) FROM pdl"
+            count = Convert.ToInt32(cmd.ExecuteScalar())
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical)
+        Finally
+            conn.Close()
+        End Try
+        Return count
+    End Function
+
+
+
+
+
+
     Public Sub LoadPDLInformation(pdlId As Integer)
         Dim pdlData As DataTable = GetTableData(pdl, $"pdl_id = {pdlId}")
         If pdlData.Rows.Count > 0 Then
@@ -413,4 +435,6 @@ Module modDB
             End If
         Next
     End Sub
+
+
 End Module

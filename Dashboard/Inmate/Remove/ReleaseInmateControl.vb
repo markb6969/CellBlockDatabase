@@ -86,6 +86,14 @@
             selectedItem = 0
             mainForm.SwitchToInmateHomeControl()
         End If
+
+        Dim adminDashboard As AdminMainDashboard = TryCast(Me.ParentForm, AdminMainDashboard)
+        If adminDashboard IsNot Nothing Then
+            Logs("inmate has been released: " + inmateDetails("last_name") + ", " + inmateDetails("first_name"))
+            selectedItem = 0
+            adminDashboard.SwitchToInmateHomeControl()
+        End If
+
     End Sub
 
     Private Sub btnOfficerSignature_Click(sender As Object, e As EventArgs) Handles btnOfficerSignature.Click
@@ -115,7 +123,5 @@
         mainform.SwitchToInmateHomeControl()
     End Sub
 
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
 
-    End Sub
 End Class

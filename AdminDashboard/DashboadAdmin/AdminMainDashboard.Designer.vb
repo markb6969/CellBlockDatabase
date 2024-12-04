@@ -138,6 +138,7 @@ Partial Class AdminMainDashboard
         Me.lblTotal.Size = New System.Drawing.Size(75, 93)
         Me.lblTotal.TabIndex = 31
         Me.lblTotal.Text = "0"
+        Me.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label1
         '

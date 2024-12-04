@@ -199,5 +199,41 @@
 
     End Sub
 
+    Private Sub lblTotal_Click(sender As Object, e As EventArgs) Handles lblTotal.Click
+
+    End Sub
+
+    Private Sub MainDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+            Dim pdlCount As Integer = GetPDLCount()
+            lblTotal.Text = $"{pdlCount}" ' Ensure the label name matches.
+        Catch ex As Exception
+            MsgBox($"Error loading PDL count: {ex.Message}", MsgBoxStyle.Critical)
+        End Try
+    End Sub
+
+    Private Sub DeletePDL(selectedPDLId As Integer)
+        Try
+            ' Delete the record from the database
+            DeleteRecord("pdl", New Dictionary(Of String, Object) From {{"id", selectedPDLId}})
+
+            ' Inform the user
+            MsgBox("PDL deleted successfully!", MsgBoxStyle.Information)
+
+            ' Refresh the PDL count after deletion
+            RefreshPDLCount()
+        Catch ex As Exception
+            MsgBox($"Error deleting PDL: {ex.Message}", MsgBoxStyle.Critical)
+        End Try
+    End Sub
+
+    Private Sub RefreshPDLCount()
+        Try
+            Dim pdlCount As Integer = GetPDLCount()
+            lblTotal.Text = $"{pdlCount}"
+        Catch ex As Exception
+            MsgBox($"Error updating PDL count: {ex.Message}", MsgBoxStyle.Critical)
+        End Try
+    End Sub
 
 End Class
