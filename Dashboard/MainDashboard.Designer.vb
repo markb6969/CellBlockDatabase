@@ -180,8 +180,7 @@ Partial Class MainDashboard
         '
         'lblTotal
         '
-        Me.lblTotal.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblTotal.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblTotal.AutoSize = True
         Me.lblTotal.Font = New System.Drawing.Font("Poppins", 39.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotal.Location = New System.Drawing.Point(973, 41)
@@ -190,7 +189,6 @@ Partial Class MainDashboard
         Me.lblTotal.Size = New System.Drawing.Size(75, 93)
         Me.lblTotal.TabIndex = 25
         Me.lblTotal.Text = "0"
-        Me.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label1
         '

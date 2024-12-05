@@ -32,7 +32,7 @@ Partial Class ReportHomeControl
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.cmbReports = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel()
@@ -166,26 +166,26 @@ Partial Class ReportHomeControl
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer))
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Controls.Add(Me.ComboBox3)
+        Me.Panel2.Controls.Add(Me.cmbReports)
         Me.Panel2.Location = New System.Drawing.Point(72, 137)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(329, 44)
         Me.Panel2.TabIndex = 43
         '
-        'ComboBox3
+        'cmbReports
         '
-        Me.ComboBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.cmbReports.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ComboBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer))
-        Me.ComboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox3.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox3.ForeColor = System.Drawing.Color.Black
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"Inmate Summary Report", "Incident Report", "Medical Report", "Cellblock Population Report", "Disciplinary Action Report", "Release and Transfer Report"})
-        Me.ComboBox3.Location = New System.Drawing.Point(3, 4)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(318, 34)
-        Me.ComboBox3.TabIndex = 31
+        Me.cmbReports.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer), CType(CType(247, Byte), Integer))
+        Me.cmbReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmbReports.Font = New System.Drawing.Font("Poppins", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbReports.ForeColor = System.Drawing.Color.Black
+        Me.cmbReports.FormattingEnabled = True
+        Me.cmbReports.Items.AddRange(New Object() {"PDL Population Report", "Staff Population Report", "Crime Report", "Criminal Case Report", "Medical Report", "PDL Release Report"})
+        Me.cmbReports.Location = New System.Drawing.Point(3, 4)
+        Me.cmbReports.Name = "cmbReports"
+        Me.cmbReports.Size = New System.Drawing.Size(318, 34)
+        Me.cmbReports.TabIndex = 31
         '
         'Label2
         '
@@ -298,7 +298,7 @@ Partial Class ReportHomeControl
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents cmbReports As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel7 As Panel
     Friend WithEvents TableLayoutPanel5 As TableLayoutPanel

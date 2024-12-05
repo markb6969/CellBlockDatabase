@@ -136,7 +136,18 @@
             Return
         End If
         Dim mainform As MainDashboard = TryCast(Me.ParentForm, MainDashboard)
-        mainform.SwitchToViewPDL()
+        If mainform IsNot Nothing Then
+            mainform.SwitchToViewPDL()
+            Return
+        End If
+
+        'ADMIN DASHBOARD
+        Dim adminDashboard As AdminMainDashboard = TryCast(Me.ParentForm, AdminMainDashboard)
+        If adminDashboard IsNot Nothing Then
+            adminDashboard.SwitchToViewPDL()
+            Return
+        End If
+
     End Sub
 
     Private Sub btnViewMed_Click(sender As Object, e As EventArgs) Handles btnViewMed.Click
@@ -147,7 +158,17 @@
         End If
 
         Dim mainform As MainDashboard = TryCast(Me.ParentForm, MainDashboard)
-        mainform.SwitchtoViewMedical()
+        If mainform IsNot Nothing Then
+            mainform.SwitchtoViewMedical()
+            Return
+        End If
+
+        'ADMIN DASHBOARD
+        Dim adminDashboard As AdminMainDashboard = TryCast(Me.ParentForm, AdminMainDashboard)
+        If adminDashboard IsNot Nothing Then
+            adminDashboard.SwitchtoViewMedical()
+            Return
+        End If
     End Sub
 
     Private Sub btnViewCase_Click(sender As Object, e As EventArgs) Handles btnViewCase.Click
@@ -157,6 +178,17 @@
             Return
         End If
         Dim mainform As MainDashboard = TryCast(Me.ParentForm, MainDashboard)
-        mainform.switchtoviewcase()
+        If mainform IsNot Nothing Then
+            mainform.switchtoviewcase()
+            Return
+        End If
+
+        'ADMIN DASHBOARD
+        Dim adminDashboard As AdminMainDashboard = TryCast(Me.ParentForm, AdminMainDashboard)
+        If adminDashboard IsNot Nothing Then
+            adminDashboard.switchtoviewcase()
+            Return
+        End If
+
     End Sub
 End Class

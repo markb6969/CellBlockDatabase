@@ -41,7 +41,20 @@
         Logs("exited PDL view information")
         Dim mainform As MainDashboard = TryCast(Me.ParentForm, MainDashboard)
         selectedItem = 0
-        mainform.SwitchToInmateHomeControl()
+
+        If mainform IsNot Nothing Then
+            mainform.SwitchToInmateHomeControl()
+            Return
+        End If
+
+        Dim adminDashboard As AdminMainDashboard = TryCast(Me.ParentForm, AdminMainDashboard)
+        selectedItem = 0
+
+        If adminDashboard IsNot Nothing Then
+            adminDashboard.SwitchToInmateHomeControl()
+            Return
+        End If
+
     End Sub
 
 End Class

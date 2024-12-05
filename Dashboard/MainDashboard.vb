@@ -134,6 +134,12 @@
 
 
     ' Client in manage access
+
+    Public Sub SwitchToMakeAnnouncementControl()
+        switchTableLayoutPanel(tlpMain, New AnnouncementControl())
+    End Sub
+
+
     Public Sub SwitchToClientHomeControl()
         switchTableLayoutPanel(tlpMain, New ClientHomeControl())
     End Sub

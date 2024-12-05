@@ -158,6 +158,15 @@
 
 
     'ADMIN CONTROLS (ME)
+    Public Sub switchtoviewcase()
+        switchTableLayoutPanel(tlpMain, New ViewCaseController())
+    End Sub
+    Public Sub SwitchtoViewMedical()
+        switchTableLayoutPanel(tlpMain, New ViewMedicalInfo)
+    End Sub
+    Public Sub SwitchToViewPDL()
+        switchTableLayoutPanel(tlpMain, New ViewPDLControl())
+    End Sub
     Public Sub SwitchToAdminInfoControl()
         switchTableLayoutPanel(tlpMain, New AdminControl())
     End Sub

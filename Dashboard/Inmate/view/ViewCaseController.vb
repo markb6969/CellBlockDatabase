@@ -70,6 +70,18 @@ Public Class ViewCaseController
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Logs("Exited view case")
         Dim mainform As MainDashboard = TryCast(Me.ParentForm, MainDashboard)
-        mainform.SwitchToInmateHomeControl()
+
+        If mainform IsNot Nothing Then
+            mainform.SwitchToInmateHomeControl()
+            Return
+        End If
+
+
+        Dim adminDasboard As AdminMainDashboard = TryCast(Me.ParentForm, AdminMainDashboard)
+        If adminDasboard IsNot Nothing Then
+            adminDasboard.SwitchToInmateHomeControl()
+            Return
+        End If
+
     End Sub
 End Class

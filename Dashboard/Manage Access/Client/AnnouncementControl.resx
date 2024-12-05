@@ -117,10 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RichTextBox1.Text" xml:space="preserve">
-    <value>a physical altercation occurred within Cellblock Central involving two inmates. The incident began as a verbal dispute between the individuals, which quickly escalated when one inmate physically attacked the other.</value>
-  </data>
-  <data name="rtxtDescripton.Text" xml:space="preserve">
-    <value>Effective immediately, all visitation hours at Cellblock Central will be extended to accommodate more visitors. The new visitation hours will be from 9 AM to 5 PM every day, including weekends. Please ensure that all visitors adhere to the updated guidelines for a smooth and efficient process.</value>
-  </data>
 </root>
